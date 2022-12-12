@@ -1,0 +1,45 @@
+.landingPage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.landingPage_nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  padding: 20px;
+}
+
+.landingPage_navlogo {
+  width: 150px;
+  object-fit: contain;
+  position: fixed;
+  left: 20px;
+}
+
+.landingPage_signinButton {
+  width: 100px;
+  right: 20px;
+  position: fixed;
+  padding: 10px 10px;
+  background-color: #e50914;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.landingPage_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
