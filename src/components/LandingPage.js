@@ -21,7 +21,7 @@ const LandingPage = () => {
           />
         </Link>
         <Link to="/" className="landingPage_signinButton">
-          SignIn
+          Sign In
         </Link>
       </div>
       <div className="landingPage_content">
