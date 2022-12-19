@@ -28,7 +28,7 @@ const LandingPage = () => {
         <h1>Unlimited movies, TV shows and many more.</h1>
         <h2>Watch anywhere. Cancel anytime</h2>
         <h3>Ready to watch? Click on below button to create your membership</h3>
-        <Link to="/" className="landingPage_startButton">
+        <Link to="/home" className="landingPage_startButton">
           Get Started
         </Link>
       </div>
