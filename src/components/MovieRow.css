@@ -20,6 +20,7 @@
   max-height: 100px;
   margin-right: 10px;
   transition: transform 450ms;
+  cursor: pointer;
 }
 
 .movieRow_poster:hover {
@@ -32,4 +33,37 @@
 
 .movieRow_posterLarge:hover {
   transform: scale(1.12);
+}
+
+.movieRow_arrowLeftIcon {
+  height: 100px !important;
+  position: sticky;
+  left: -10px;
+  padding: 5px;
+  background-color: #e6e6e6;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: -5px;
+  z-index: 10;
+}
+
+.movieRow_arrowLeftIcon:active {
+  transform: translateX(-20%);
+}
+
+.movieRow_arrowRightIcon {
+  height: 100px !important;
+  position: sticky;
+  right: -10px;
+  padding: 5px;
+  background-color: #e6e6e6;
+  color: black;
+  cursor: pointer;
+  margin-top: -5px;
+  z-index: 10;
+}
+
+.movieRow_arrowRightIcon:active {
+  transform: translateX(20%);
 }

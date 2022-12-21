@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./MovieRow.css";
 import axios from "../axios";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -20,6 +22,7 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
     <div className="movieRow">
       <h1>{title}</h1>
       <div className={`movieRow_posters`}>
+        <ArrowBackIosIcon className="movieRow_arrowLeftIcon" />
         {movieData.map((movie) => {
           return (
             // <ul>
@@ -34,6 +37,7 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
             // </ul>
           );
         })}
+        <ArrowForwardIosIcon className="movieRow_arrowRightIcon" />
       </div>
     </div>
   );
