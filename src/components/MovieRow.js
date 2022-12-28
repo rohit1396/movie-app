@@ -3,6 +3,7 @@ import "./MovieRow.css";
 import axios from "../axios";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+// import { Link } from "react-router-dom";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -12,7 +13,7 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
   useEffect(() => {
     const getMovies = async () => {
       const request = await axios.get(fetchUrl);
-      console.log(request);
+      // console.log(request);
       setMovieData(request.data.results);
     };
     getMovies();
@@ -23,20 +24,24 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
       <h1>{title}</h1>
       <div className={`movieRow_posters`}>
         <ArrowBackIosIcon className="movieRow_arrowLeftIcon" />
+        {/* <Link to="/home/moviedetails"> */}
         {movieData.map((movie) => {
           return (
-            // <ul>
-            <img
-              key={movie?.id}
-              className={`movieRow_poster ${isLarge && "movieRow_posterLarge"}`}
-              src={`${base_url}${
-                isLarge ? movie?.poster_path : movie?.backdrop_path
-              }`}
-              alt={`${movie?.title || movie?.original_title}`}
-            />
-            // </ul>
+            <>
+              <img
+                key={movie?.id}
+                className={`movieRow_poster ${
+                  isLarge && "movieRow_posterLarge"
+                }`}
+                src={`${base_url}${
+                  isLarge ? movie?.poster_path : movie?.backdrop_path
+                }`}
+                alt={`${movie?.title || movie?.original_title}`}
+              />
+            </>
           );
         })}
+        {/* </Link> */}
         <ArrowForwardIosIcon className="movieRow_arrowRightIcon" />
       </div>
     </div>
