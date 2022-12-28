@@ -1,11 +1,13 @@
 import React from "react";
-import "./Home.css"
+import "./Home.css";
 import MovieRow from "./MovieRow";
 import requests from "../requests";
+import MovieCover from "./MovieCover";
 
 const Home = () => {
   return (
     <div className="home">
+      <MovieCover />
       <MovieRow
         title="Neflix Originals"
         fetchUrl={requests.fetchNetflixoriginals}
