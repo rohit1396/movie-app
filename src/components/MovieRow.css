@@ -6,7 +6,7 @@
 
 .movieRow_posters {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   overflow-x: scroll;
   overflow-y: hidden;
   padding: 20px;
