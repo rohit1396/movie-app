@@ -3,10 +3,12 @@ import "./Home.css";
 import MovieRow from "./MovieRow";
 import requests from "../requests";
 import MovieCover from "./MovieCover";
+import Navbar from "./Navbar";
 
 const Home = () => {
   return (
     <div className="home">
+      <Navbar />
       <MovieCover />
       <MovieRow
         title="Neflix Originals"
