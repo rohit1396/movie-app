@@ -27,7 +27,7 @@ const MovieCover = () => {
 
   useEffect(() => {
     getNextMovie();
-  },[select]);
+  }, [select]);
 
   // const [select, setSelect] = useState(0);
   // const [movie, setMovie] = useState([]);
@@ -62,7 +62,7 @@ const MovieCover = () => {
           <button className="movieCover_button">Play</button>
           <button className="movieCover_button">My List</button>
         </div>
-        <div className="movieCover_fadeBottom"></div>
+        {/* <div className="movieCover_fadeBottom"></div> */}
       </div>
       <ArrowForwardIosIcon
         className="nextArrow arrowButton"
