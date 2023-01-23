@@ -16,9 +16,9 @@ const MovieCover = () => {
       const request = await axios.get(requests.fetchTrending);
       console.log(request);
       setMovie(
-        request.data.results[select]
-        // movie
-        // Math.floor(Math.random() * request.data.results.length - 1)
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length - 1)
+        ]
       );
       console.log(movie);
     };
