@@ -1,16 +1,39 @@
 .navbar {
-  /* height: 30px; */
+  height: 30px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 12;
+}
+
+.navbar_black {
   background-color: #111;
+  border-bottom: 1px solid white;
 }
 
 .navbar_logo {
-  width: 150px;
+  width: 130px;
   object-fit: contain;
-  padding: 20px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 12;
+}
+
+.navbar_search {
+  display: flex;
+  flex: 0.75;
+}
+
+.navbar_searchInput {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.searchIcon {
+  color: white !important;
+  height: 5px;
+  padding: 10px;
+  cursor: pointer;
 }
