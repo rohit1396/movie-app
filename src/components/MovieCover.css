@@ -1,9 +1,40 @@
-.movieCover {
+.movieCover_container {
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1200px; */
+  color: white;
+}
+
+.movieCover_container > div {
+  margin: 0 auto;
+  width: 100%;
+  height: 450px;
+  /* max-width: 1100px; */
+  /* text-align: center; */
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+/* .movieCover {
   height: 448px;
+  width: 90vw;
   object-fit: contain;
   color: white;
   background-repeat: no-repeat;
   position: relative;
+} */
+
+header {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  color: white;
+  background-repeat: no-repeat;
+  opacity: 0;
+  position: absolute;
 }
 
 .movieCover_content {
@@ -80,4 +111,15 @@
 .arrowButton:hover {
   background-color: rgb(158, 154, 154) !important;
   color: white;
+}
+
+header.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+header.lastSlide {
+  transform: translateX(-100%);
+}
+header.nextSlide {
+  transform: translateX(100%);
 }
