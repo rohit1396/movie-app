@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
+import { GlobalMovie } from "../MovieContext";
 
 const Navbar = () => {
+  const { query, setQuery } = GlobalMovie();
   const [show, setShow] = useState(false);
-  const [input, setInput] = useState("");
+  // const [input, setInput] = useState("");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -32,10 +35,12 @@ const Navbar = () => {
         <input
           className="navbar_searchInput"
           type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
-        <SearchIcon className="searchIcon" />
+        <Link to="/searchpage">
+          <SearchIcon className="searchIcon" />
+        </Link>
       </div>
     </div>
   );

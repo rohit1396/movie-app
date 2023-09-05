@@ -18,6 +18,7 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
       const request = await axios.get(fetchUrl);
       // console.log(request);
       setMovieData(request.data.results);
+      // console.log(movieData);
     };
     getMovies();
   }, [fetchUrl]);
@@ -37,7 +38,6 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
     <div className="movieRow">
       <h1>{title}</h1>
       <div className={`movieRow_posters`}>
-        <ArrowBackIosIcon className="movieRow_arrowLeftIcon" />
         {/* <Link to="/home/moviedetails"> */}
         {movieData.map((movie) => {
           return (
@@ -68,7 +68,6 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
           );
         })}
         {/* </Link> */}
-        <ArrowForwardIosIcon className="movieRow_arrowRightIcon" />
       </div>
     </div>
   );
