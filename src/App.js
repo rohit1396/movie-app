@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./components/Home";
 import LandingPage from "./components/LandingPage";
 import MovieDetailsPage from "./components/MovieDetailsPage";
+import SearchPage from "./components/SearchPage";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -11,7 +13,24 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<Home />} />
-        <Route exact path="/home/moviedetails" element={<MovieDetailsPage />} />
+        <Route
+          path="/searchpage"
+          element={
+            <>
+              <Navbar />
+              <SearchPage />
+            </>
+          }
+        />
+        <Route
+          path="/searchpage/moviedetailspage/:movieId"
+          element={
+            <>
+              <Navbar />
+              <MovieDetailsPage />
+            </>
+          }
+        />
       </Routes>
     </div>
   );
