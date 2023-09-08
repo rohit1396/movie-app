@@ -1,0 +1,56 @@
+.moviedetailspage {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* background-color: #00001a; */
+  background-color: #324e4e;
+  /* background: linear-gradient(to right, #ccffff 0%, #ccccff 100%); */
+  color: aliceblue;
+  margin: 0 auto;
+  letter-spacing: 2px;
+}
+
+.moviedetailspage > div {
+  height: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.moviedetailspage_img {
+  height: 450px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.moviedetailspage_content {
+  padding: 20px 0;
+}
+
+.moviedetailspage_title {
+  font-size: 18px;
+  font-weight: 600;
+  /* letter-spacing: 2px; */
+}
+
+.moviedetailspage_desc {
+  width: 800px;
+  font-size: 20px;
+  font-weight: 600;
+  /* letter-spacing: 2px; */
+}
+
+.moviedetailspage_lang,
+.moviedetailspage_rating,
+.moviedetailspage_status,
+.moviedetailspage_tagline {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.moviedetailspage_releaseDate {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}

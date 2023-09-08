@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "./MovieDetailsPage.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../requests";
+import Recommendations from "./Recommendations";
+
+const base_url = "https://image.tmdb.org/t/p/original/";
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -15,6 +21,7 @@ const MovieDetailsPage = () => {
         );
         let response = await request.json();
         setMovieData(response);
+        console.log(movieData);
       } catch (err) {
         console.log(err.message);
         alert(err);
@@ -22,7 +29,44 @@ const MovieDetailsPage = () => {
     };
     getMovies();
   }, [movieId]);
-  return <div>{movieData.overview}</div>;
+  return (
+    <section className="moviedetailspage">
+      <div
+        style={{
+          backgroundSize: "cover",
+          backgroundImage: `linear-gradient(0deg, transparent, rgba(37, 37, 37, 0.61) ), url(${base_url}${movieData?.backdrop_path})`,
+          backgroundPosition: "center center",
+        }}
+      ></div>
+      <div className="moviedetailspage_content">
+        <p className="moviedetailspage_title">Title : {movieData.title}</p>
+        <br></br>
+        <h3 className="moviedetailspage_desc">
+          Description : {movieData.overview}
+        </h3>
+        <br></br>
+        <h4 className="moviedetailspage_lang">
+          Language : {movieData?.original_language}
+        </h4>
+        <h4 className="moviedetailspage_rating">
+          Rating : {Math.round(movieData?.vote_average)}
+        </h4>
+        <h4 className="moviedetailspage_status">
+          Status : {movieData?.status}
+        </h4>
+        <h4 className="moviedetailspage_tagline">
+          Tagline : {movieData?.tagline}
+        </h4>
+        <h4 className="moviedetailspage_releaseDate">
+          Realeased On : {movieData?.release_date}
+        </h4>
+      </div>
+      <div>
+        <h3>Recommended for users</h3>
+        <Recommendations movieid={movieId} />
+      </div>
+    </section>
+  );
 };
 
 export default MovieDetailsPage;
