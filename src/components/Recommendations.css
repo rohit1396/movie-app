@@ -1,0 +1,10 @@
+.recommendations {
+  display: flex;
+  margin-top: 15px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.recommendations::-webkit-scrollbar {
+  display: none;
+}
