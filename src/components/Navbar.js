@@ -26,11 +26,13 @@ const Navbar = () => {
 
   return (
     <div className={`navbar ${show && "navbar_black"}`}>
-      <img
-        className="navbar_logo"
-        src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
-        alt="navbar_logo"
-      />
+      <Link to="/home">
+        <img
+          className="navbar_logo"
+          src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
+          alt="navbar_logo"
+        />
+      </Link>
       <div className="navbar_search">
         <input
           className="navbar_searchInput"
