@@ -8,7 +8,7 @@
   object-fit: contain;
   /* width: 250px; */
   max-height: 180px;
-  margin-right: 10px;
+  margin-right: 15px;
   transition: transform 450ms;
   cursor: pointer;
   z-index: 1;
@@ -20,15 +20,19 @@
 }
 
 .movieCard_show {
-  transform: translateY(0);
+  transform: translateY(-40px);
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   max-width: 300px;
   min-height: fit-content;
-  background-color: #324e4e;
+  /* background-color: #324e4e; */
+  background-color: #00001a;
   padding: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: ease-in-out 3s;
 }
 
 .movieCard_title {

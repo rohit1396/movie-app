@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./MovieCard.css";
+import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
@@ -11,15 +14,18 @@ const MovieCard = ({ movie, isLarge }) => {
   };
   return (
     <div className="movieCard">
-      <img
-        className="movieCard_img"
-        src={`${base_url}${
-          isLarge ? movie?.poster_path : movie?.backdrop_path
-        }`}
-        alt={movie?.title || movie?.original_title}
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-      />
+      <Link to={`/moviedetailspage/${movie?.id}`}>
+        <LazyLoadImage
+          className="movieCard_img"
+          src={`${base_url}${
+            isLarge ? movie?.poster_path : movie?.backdrop_path
+          }`}
+          alt={movie?.title || movie?.original_title}
+          effect="blur"
+          onMouseEnter={() => setShow(true)}
+          onMouseLeave={() => setShow(false)}
+        />
+      </Link>
       {
         <div
           className={`${show ? "movieCard_show" : "movieCard_hide"}`}
