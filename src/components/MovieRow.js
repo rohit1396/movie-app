@@ -40,32 +40,7 @@ const MovieRow = ({ title, fetchUrl, isLarge }) => {
       <div className={`movieRow_posters`}>
         {/* <Link to="/home/moviedetails"> */}
         {movieData.map((movie) => {
-          return (
-            <>
-              <MovieCard key={movie.id} movie={movie} isLarge={isLarge} />
-              {/* <div className="movieRow_details">
-                <img
-                  key={movie?.id}
-                  className={`movieRow_poster ${
-                    isLarge && "movieRow_posterLarge"
-                  }`}
-                  onMouseEnter={showMovieDetails}
-                  onMouseLeave={() => setShow(false)}
-                  src={`${base_url}${
-                    isLarge ? movie?.poster_path : movie?.backdrop_path
-                  }`}
-                  alt={`${movie?.title || movie?.original_title}`}
-                />
-                {show && (
-                  <div className="movieRow_description">
-                    <p>{movie?.title || movie?.original_title}</p>
-                    <p>{truncate(movie?.overview, 150)}</p>
-                  <p>{movie?.vote_average}</p>
-                  </div>
-                )}
-              </div> */}
-            </>
-          );
+          return <MovieCard key={movie.id} movie={movie} isLarge={isLarge} />;
         })}
         {/* </Link> */}
       </div>
