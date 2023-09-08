@@ -23,6 +23,24 @@ function App() {
           }
         />
         <Route
+          path="/moviedetailspage/:movieId"
+          element={
+            <>
+              <Navbar />
+              <MovieDetailsPage />
+            </>
+          }
+        />
+        <Route
+          path="/home/moviedetailspage/:movieId"
+          element={
+            <>
+              <Navbar />
+              <MovieDetailsPage />
+            </>
+          }
+        />
+        <Route
           path="/searchpage/moviedetailspage/:movieId"
           element={
             <>
