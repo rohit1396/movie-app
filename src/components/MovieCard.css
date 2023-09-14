@@ -27,12 +27,11 @@
   position: sticky;
   max-width: 300px;
   min-height: fit-content;
-  /* background-color: #324e4e; */
   background-color: #00001a;
   padding: 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: ease-in-out 3s;
+  transition: ease-in-out 1s;
 }
 
 .movieCard_title {

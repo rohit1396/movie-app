@@ -3,7 +3,6 @@ import "./MovieColumn.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
-import MovieDetailsPage from "./MovieDetailsPage";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 

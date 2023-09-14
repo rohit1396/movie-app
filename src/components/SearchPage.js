@@ -31,7 +31,7 @@ const SearchPage = () => {
           {"search results for " + " " + `"${query}"`}
         </h3>
       )}
-      {movie ? (
+      {movie.length !== 0 ? (
         movie?.map((movie) => {
           return (
             <section>
@@ -39,8 +39,14 @@ const SearchPage = () => {
             </section>
           );
         })
+      ) : !query ? (
+        <h3 className="searchpage_title">
+          {`No Movies to show , search for query`}
+        </h3>
       ) : (
-        <h3 style={{ color: "white" }}>No Movies to show search for a movie</h3>
+        <h3 className="searchpage_title">
+          {`No Movies to display for ${query}`}
+        </h3>
       )}
     </div>
   );
