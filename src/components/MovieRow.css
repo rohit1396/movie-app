@@ -6,62 +6,31 @@
 
 .movieRow_posters {
   display: flex;
-  /* align-items: center; */
   overflow-x: scroll;
   overflow-y: hidden;
   padding: 20px;
-}
-
-.movieRow_posters > a {
-  text-decoration: none;
-  display: flex;
 }
 
 .movieRow_posters::-webkit-scrollbar {
   display: none;
 }
 
-.movieRow_poster {
-  object-fit: contain;
-  /* width: 100%; */
-  max-height: 180px;
-  margin-right: 10px;
-  transition: transform 450ms;
-  cursor: pointer;
-}
-
-.movieRow_poster:hover {
-  transform: scale(1.08);
-}
-
-.movieRow_posterLarge {
-  max-height: 250px;
-}
-
-.movieRow_posterLarge:hover {
-  transform: scale(1.12);
-}
-
-.movieRow_details {
+.movieRow_images {
   display: flex;
-  flex-direction: column;
-  max-height: 300px;
-  margin-right: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 20px;
 }
 
-.movieRow_description {
-  display: flex;
-  flex-direction: column;
-  font-size: 10px;
-}
-
-.movieRow_hideDescription {
+.movieRow_images::-webkit-scrollbar {
   display: none;
 }
 
 .movieRow_arrowLeftIcon {
   height: 100px !important;
   position: sticky;
+  top: 20%;
   left: -10px;
   padding: 5px;
   background-color: #e6e6e6;
@@ -70,15 +39,11 @@
   cursor: pointer;
   margin-top: -5px;
   z-index: 10;
-  transition: transform 1000ms;
-}
-
-.movieRow_arrowLeftIcon:active {
-  transform: translateX(-20%);
 }
 
 .movieRow_arrowRightIcon {
   height: 100px !important;
+  top: 20%;
   position: sticky;
   right: -10px;
   padding: 5px;
@@ -87,9 +52,4 @@
   cursor: pointer;
   margin-top: -5px;
   z-index: 10;
-  transition: transform 1000ms;
-}
-
-.movieRow_arrowRightIcon:active {
-  transform: translateX(20%);
 }
