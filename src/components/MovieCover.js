@@ -56,8 +56,6 @@ const MovieCover = () => {
     <div className="movieCover_container">
       <div>
         {movies.map((movie, movieIndex) => {
-          // const { backdrop_path, overview, original_title } = movie[index];
-
           let position = "nextSlide";
 
           if (movieIndex === index) {
