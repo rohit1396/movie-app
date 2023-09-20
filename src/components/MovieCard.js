@@ -17,9 +17,7 @@ const MovieCard = ({ movie, isLarge }) => {
       <Link to={`/moviedetailspage/${movie?.id}`}>
         <LazyLoadImage
           className="movieCard_img"
-          src={`${base_url}${
-            isLarge ? movie?.poster_path : movie?.backdrop_path
-          }`}
+          src={`${base_url}${movie?.backdrop_path}`}
           alt={movie?.title || movie?.original_title}
           effect="blur"
           onMouseEnter={() => setShow(true)}
