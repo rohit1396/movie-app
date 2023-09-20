@@ -12,7 +12,7 @@ const MovieColumn = ({ movie }) => {
   };
   return (
     <div className="moviecolumn">
-      <Link to={`moviedetailspage/${movie.id}`}>
+      <Link to={`/searchpage/moviedetailspage/${movie.id}`}>
         <section>
           <div>
             <LazyLoadImage
