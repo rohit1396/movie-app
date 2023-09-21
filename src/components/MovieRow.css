@@ -4,11 +4,15 @@
   text-decoration: none;
 }
 
+.movieRow > h1 {
+  margin-top: 10px;
+}
+
 .movieRow_posters {
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .movieRow_posters::-webkit-scrollbar {
@@ -52,4 +56,13 @@
   cursor: pointer;
   margin-top: -5px;
   z-index: 10;
+}
+
+/* ************************ Media Queries ************************* */
+
+@media only screen and (max-width: 600px) {
+  .movieRow_arrowLeftIcon,
+  .movieRow_arrowRightIcon {
+    display: none !important;
+  }
 }

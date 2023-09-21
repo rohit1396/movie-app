@@ -12,6 +12,7 @@
   transition: transform 450ms;
   cursor: pointer;
   z-index: 1;
+  border: 1px solid white;
 }
 
 .movieCard_hide {
@@ -32,6 +33,9 @@
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   transition: ease-in-out 1s;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .movieCard_title {
@@ -50,4 +54,16 @@
   font-weight: 800;
   margin-bottom: 5px;
   letter-spacing: 2px;
+}
+
+/* ********************* Media Queries *********************** */
+
+@media only screen and (max-width: 600px) {
+  .movieCard_img {
+    width: 250px;
+  }
+
+  .movieCard_show {
+    display: none;
+  }
 }
