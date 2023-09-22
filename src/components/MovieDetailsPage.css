@@ -1,6 +1,7 @@
 .moviedetailspage {
   height: auto;
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -28,7 +29,8 @@
 .moviedetailspage_desc {
   width: 750px;
   font-size: 20px;
-  font-weight: 600;
+  /* font-weight: 600; */
+  width: fit-content;
 }
 
 .moviedetailspage_lang,
@@ -48,25 +50,52 @@
 /* *********************** Media Queries ************************* */
 
 @media only screen and (max-width: 450px) {
-  .moviedetailspage_content {
-    height: max-content;
-    max-width: 500px;
-    margin: auto;
+  .moviedetailspage {
+    width: auto;
   }
+
+  .moviedetailspage_title {
+    font-size: 14px;
+  }
+
   .moviedetailspage_desc {
-    max-width: 350px;
-    margin: auto;
+    font-size: 16px;
+    width: fit-content;
+  }
+
+  .moviedetailspage_lang,
+  .moviedetailspage_rating,
+  .moviedetailspage_status,
+  .moviedetailspage_tagline {
+    font-size: 16px;
+  }
+  .moviedetailspage_releaseDate {
+    font-size: 14px;
   }
 }
 
-@media (min-width: 451px) and (max-width: 600px) {
-  .moviedetailspage_content {
-    height: auto;
-    max-width: 750px;
-    margin: auto;
+@media only screen and (min-width: 451px) and (max-width: 600px) {
+  .moviedetailspage {
+    width: auto;
   }
+
   .moviedetailspage_desc {
-    max-width: 400px;
-    margin: auto;
+    font-size: 16px;
+    width: fit-content;
+  }
+  .moviedetailspage_title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .moviedetailspage_lang,
+  .moviedetailspage_rating,
+  .moviedetailspage_status,
+  .moviedetailspage_tagline {
+    font-size: 16px;
+  }
+
+  .moviedetailspage_releaseDate {
+    font-size: 16px;
   }
 }

@@ -25,7 +25,7 @@ const SearchPage = () => {
   }, [getMovies]);
 
   return (
-    <div>
+    <div className="searchpage">
       {query && (
         <h3 className="searchpage_title">
           {"search results for " + " " + `"${query}"`}

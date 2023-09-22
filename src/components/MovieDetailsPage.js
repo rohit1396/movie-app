@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./MovieDetailsPage.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../requests";
@@ -29,6 +28,7 @@ const MovieDetailsPage = () => {
     };
     getMovies();
   }, [movieId]);
+
   return (
     <section className="moviedetailspage">
       <div
@@ -39,7 +39,7 @@ const MovieDetailsPage = () => {
         }}
       ></div>
       <div className="moviedetailspage_content">
-        <p className="moviedetailspage_title">Title : {movieData.title}</p>
+        <h2 className="moviedetailspage_title">Title : {movieData.title}</h2>
         <br></br>
         <h3 className="moviedetailspage_desc">
           Description : {movieData.overview}
@@ -61,7 +61,7 @@ const MovieDetailsPage = () => {
           Realeased On : {movieData?.release_date}
         </h4>
       </div>
-      <div>
+      <div className="movie_recommendations">
         <h3>Recommended for users</h3>
         <Recommendations movieid={movieId} />
       </div>
