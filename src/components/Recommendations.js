@@ -22,13 +22,16 @@ const Recommendations = ({ movieid }) => {
 
   return (
     <div className="recommendations">
-      {movies?.map((movie) => {
-        return (
-          <sectionn>
-            <MovieCard key={movie.id} movie={movie} />
-          </sectionn>
-        );
-      })}
+      {movies.length > 0 && <h2>Movies Recommended</h2>}
+      <div className="recommendation_movies">
+        {movies?.map((movie) => {
+          return (
+            <sectionn>
+              <MovieCard key={movie.id} movie={movie} />
+            </sectionn>
+          );
+        })}
+      </div>
     </div>
   );
 };

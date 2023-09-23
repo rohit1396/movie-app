@@ -6,7 +6,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const base_url = "https://image.tmdb.org/t/p/original";
 
-const MovieCard = ({ movie, isLarge }) => {
+const MovieCard = ({ movie }) => {
   const [show, setShow] = useState(false);
 
   const truncate = (str, n) => {

@@ -1,10 +1,15 @@
 .recommendations {
   display: flex;
+  flex-direction: column;
+}
+
+.recommendation_movies {
+  display: flex;
   margin-top: 15px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
 
-.recommendations::-webkit-scrollbar {
+.recommendation_movies::-webkit-scrollbar {
   display: none;
 }

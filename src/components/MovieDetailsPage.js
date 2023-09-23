@@ -20,7 +20,6 @@ const MovieDetailsPage = () => {
         );
         let response = await request.json();
         setMovieData(response);
-        console.log(movieData);
       } catch (err) {
         console.log(err.message);
         alert(err);
@@ -29,6 +28,9 @@ const MovieDetailsPage = () => {
     getMovies();
   }, [movieId]);
 
+  const truncate = (str, n) => {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  };
   return (
     <section className="moviedetailspage">
       <div
@@ -42,7 +44,7 @@ const MovieDetailsPage = () => {
         <h2 className="moviedetailspage_title">Title : {movieData.title}</h2>
         <br></br>
         <h3 className="moviedetailspage_desc">
-          Description : {movieData.overview}
+          Description : {truncate(movieData?.overview, 450)}
         </h3>
         <br></br>
         <h4 className="moviedetailspage_lang">
@@ -62,7 +64,6 @@ const MovieDetailsPage = () => {
         </h4>
       </div>
       <div className="movie_recommendations">
-        <h3>Recommended for users</h3>
         <Recommendations movieid={movieId} />
       </div>
     </section>
