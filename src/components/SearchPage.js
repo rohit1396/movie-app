@@ -19,7 +19,6 @@ const SearchPage = () => {
       console.log(err);
     }
   };
-
   useEffect(() => {
     getMovies();
   }, [getMovies]);
@@ -27,9 +26,7 @@ const SearchPage = () => {
   return (
     <div className="searchpage">
       {query && (
-        <h3 className="searchpage_title">
-          {"search results for " + " " + `"${query}"`}
-        </h3>
+        <h3 className="searchpage_title">{`search results for ${query}`}</h3>
       )}
       {movie.length !== 0 ? (
         movie?.map((movie) => {

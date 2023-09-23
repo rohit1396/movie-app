@@ -15,7 +15,6 @@ const Recommendations = ({ movieid }) => {
       const response = await request.json();
       console.log(response);
       setMovies(response.results);
-      console.log(movies);
     };
     getMovies();
   }, [movieid]);
