@@ -21,7 +21,7 @@ const Recommendations = ({ movieid }) => {
 
   return (
     <div className="recommendations">
-      {movies.length > 0 && <h2>Movies Recommended</h2>}
+      {movies?.length > 0 && <h2>Movies Recommended</h2>}
       <div className="recommendation_movies">
         {movies?.map((movie) => {
           return (
